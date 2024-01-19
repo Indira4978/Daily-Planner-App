@@ -1,20 +1,21 @@
 //display date top of the page
 
-// create time blocks + user input field
+// create time blocks for user input field
 
 var timeSlots = [
-  { time: "8 am", toDo: "" },
-  { time: "9 am", toDo: "" },
-  { time: "10 am", toDo: "" },
-  { time: "11 am", toDo: "" },
-  { time: "12 pm", toDo: "" },
-  { time: "1 pm", toDo: "" },
-  { time: "2 pm", toDo: "" },
-  { time: "3 pm", toDo: "" },
-  { time: "4 pm", toDo: "" },
-  { time: "5 pm", toDo: "" },
-  { time: "6 pm", toDo: "" },
-  { time: "7 pm", toDo: "" },
+  "8.00",
+  "9.00",
+  "10.00",
+  "11.00",
+  "12.00",
+  "13.00",
+  "14.00",
+  "15.00",
+  "16.00",
+  "17.00",
+  "18.00",
 ];
 
 //save to local storage
+
+console.log(dayjs().format("dddd, D MMMM YYYY"));

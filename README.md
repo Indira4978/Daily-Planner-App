@@ -26,6 +26,8 @@ n/a
 **Installation instructions**
 Open the deployed app on your local machine.
 
+https://indira4978.github.io/Daily-Planner-App/
+
 **Application uses**
 The app allows to enter a task to be completed at a specific time - in the matching user input field.
 It can then be saved in the local storage.

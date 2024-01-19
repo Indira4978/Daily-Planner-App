@@ -34,14 +34,14 @@ $(document).ready(function () {
 
     //create box
     container.append(timeBlock);
-  });
 
-  //save input to local storage
-  saveButton.on("click", function () {
-    var time = hourSlot.text();
-    var todoText = toDoInput.val();
+    //save input to local storage
+    saveButton.on("click", function () {
+      var time = hourSlot.text();
+      var todoText = toDoInput.val();
 
-    // Save data to local storage
-    localStorage.setItem(time, todoText);
+      // Save data to local storage
+      localStorage.setItem(time, todoText);
+    });
   });
 });

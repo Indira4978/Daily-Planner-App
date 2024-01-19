@@ -33,6 +33,8 @@ The app display the current day with Day.js.
 
 **DEMO/SCREENSHOT**
 
+![Alt text](images/Work-Day-Scheduler.png)
+
 **Credits and references used**
 Tutors and TAs, Stack overflow and some resources on Youtube (JQUERY, DAY.js)...
 https://www.freecodecamp.org/news/javascript-date-time-dayjs/

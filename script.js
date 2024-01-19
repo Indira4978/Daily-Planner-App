@@ -36,7 +36,12 @@ $(document).ready(function () {
     container.append(timeBlock);
   });
 
-  //save to local storage
+  //save input to local storage
+  saveButton.on("click", function () {
+    var time = hourSlot.text();
+    var todoText = toDoInput.val();
 
-  //
+    // Save data to local storage
+    localStorage.setItem(time, todoText);
+  });
 });

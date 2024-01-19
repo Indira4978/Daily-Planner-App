@@ -27,7 +27,7 @@ $(document).ready(function () {
     var timeBlock = $("<div>").addClass("time-block");
     var hourSlot = $("<div>").addClass("hour").text(time);
     var toDoInput = $("<textarea>").addClass("description");
-    var saveButton = $("<button>").addClass("saveBtn");
+    var saveButton = $("<button>").addClass("saveBtn").text("Save");
 
     //add all elements
     timeBlock.append(hourSlot, toDoInput, saveButton);

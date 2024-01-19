@@ -1,4 +1,6 @@
 //display date top of the page
+var currentDay = $("#currentDay");
+currentDay.append(dayjs().format("dddd, D MMMM YYYY"));
 
 // create time blocks for user input field
 
@@ -17,5 +19,3 @@ var timeSlots = [
 ];
 
 //save to local storage
-
-console.log(dayjs().format("dddd, D MMMM YYYY"));

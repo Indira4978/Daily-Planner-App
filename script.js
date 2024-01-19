@@ -51,3 +51,22 @@ $(document).ready(function () {
     });
   });
 });
+
+function checkTime() {
+  // Compare current time with time block time
+  var currentTime = dayjs();
+  var timeBlockTime = dayjs(time, "HH.mm");
+
+  //if time hh is before day.js --- green
+  if (currentTime.isBefore(timeBlockTime, "hour")) {
+    timeBlock.addClass("future");
+  }
+
+  if (currentTime.isAfter(timeBlockTime, "hour")) {
+    timeBlock.addClass("past");
+  }
+
+  if (currentTime.isBetween(timeBlockTime, "hour")) {
+    timeBlock.addClass("present");
+  }
+}

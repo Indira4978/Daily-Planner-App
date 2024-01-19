@@ -35,6 +35,28 @@ $(document).ready(function () {
     //create box
     container.append(timeBlock);
 
+    // Check time and add correct color
+    function checkTime(timeBlock) {
+      // Compare current time with time block time
+      var currentTime = dayjs();
+      var timeBlockTime = dayjs(timeBlock.find(".hour").text(), "HH.mm");
+
+      //if time hh is before day.js --- green
+      if (currentTime.isBefore(timeBlockTime, "hour")) {
+        timeBlock.addClass("future");
+      }
+
+      if (currentTime.isAfter(timeBlockTime, "hour")) {
+        timeBlock.addClass("past");
+      }
+
+      var oneHourLater = timeBlockTime.add(1, "hour");
+      if (currentTime.isBetween(timeBlockTime, oneHourLater)) {
+        timeBlock.addClass("present");
+      }
+    }
+    // checkTime();
+
     // Retrieve data from local storage
     var savedTodo = localStorage.getItem(time);
     if (savedTodo) {
@@ -51,22 +73,3 @@ $(document).ready(function () {
     });
   });
 });
-
-function checkTime() {
-  // Compare current time with time block time
-  var currentTime = dayjs();
-  var timeBlockTime = dayjs(time, "HH.mm");
-
-  //if time hh is before day.js --- green
-  if (currentTime.isBefore(timeBlockTime, "hour")) {
-    timeBlock.addClass("future");
-  }
-
-  if (currentTime.isAfter(timeBlockTime, "hour")) {
-    timeBlock.addClass("past");
-  }
-
-  if (currentTime.isBetween(timeBlockTime, "hour")) {
-    timeBlock.addClass("present");
-  }
-}

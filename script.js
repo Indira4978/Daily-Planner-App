@@ -19,10 +19,22 @@ $(document).ready(function () {
     "18.00",
   ];
 
-  //time slots containers
+  //time slots container
   var container = $(".container");
 
   //need for each loop to create blocks and input field
+  timeSlots.forEach(function (time) {
+    var timeBlock = $("<div>").addClass("time-block");
+    var hourSlot = $("<div>").addClass("hour").text(time);
+    var toDoInput = $("<textarea>").addClass("description");
+    var saveButton = $("<button>").addClass("saveBtn");
+
+    //add all elements
+    timeBlock.append(hourSlot, toDoInput, saveButton);
+
+    //create box
+    container.append(timeBlock);
+  });
 
   //save to local storage
 

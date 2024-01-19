@@ -35,6 +35,12 @@ $(document).ready(function () {
     //create box
     container.append(timeBlock);
 
+    // Retrieve data from local storage
+    var savedTodo = localStorage.getItem(time);
+    if (savedTodo) {
+      toDoInput.val(savedTodo);
+    }
+
     //save input to local storage
     saveButton.on("click", function () {
       var time = hourSlot.text();
